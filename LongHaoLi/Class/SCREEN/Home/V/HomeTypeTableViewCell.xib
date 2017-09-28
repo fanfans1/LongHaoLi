@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="241" id="KGk-i7-Jjw" customClass="HomeTypeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="501" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="501" height="240.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-P7-mBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="212" height="240.5"/>
+                        <connections>
+                            <action selector="foodAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hsP-4r-zMM"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3j-SY-t8z">
+                        <rect key="frame" x="212" y="0.0" width="289" height="99"/>
+                        <connections>
+                            <action selector="playAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2NY-HF-mdq"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAg-uS-j9H">
+                        <rect key="frame" x="212" y="99" width="135" height="141.5"/>
+                        <connections>
+                            <action selector="lifeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RyC-sK-C36"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgX-Q8-1qS">
+                        <rect key="frame" x="347" y="99" width="154" height="141.5"/>
+                        <connections>
+                            <action selector="shoppingAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bGR-lJ-V5C"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9h-qm-B4W">
+                        <rect key="frame" x="211" y="0.0" width="1" height="240.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="LdW-O6-aOC"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BB4-tv-Mev">
+                        <rect key="frame" x="212" y="98" width="289" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="5ID-wG-j6T"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-bb-Ba3">
+                        <rect key="frame" x="346" y="99" width="1" height="141.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="P9e-aY-zXf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Z3j-SY-t8z" firstAttribute="leading" secondItem="6h9-P7-mBQ" secondAttribute="trailing" id="1gy-Dy-Qe5"/>
+                    <constraint firstItem="gAg-uS-j9H" firstAttribute="leading" secondItem="6h9-P7-mBQ" secondAttribute="trailing" id="1nT-iD-AUW"/>
+                    <constraint firstItem="gAg-uS-j9H" firstAttribute="leading" secondItem="T9h-qm-B4W" secondAttribute="trailing" id="7gr-df-GMb"/>
+                    <constraint firstItem="6h9-P7-mBQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8du-hG-Wek"/>
+                    <constraint firstItem="Z3j-SY-t8z" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="85:207" id="CqO-N0-GRt"/>
+                    <constraint firstAttribute="trailing" secondItem="Z3j-SY-t8z" secondAttribute="trailing" id="FfB-O9-AEd"/>
+                    <constraint firstItem="6h9-P7-mBQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="175:414" id="Fj4-AJ-Bll"/>
+                    <constraint firstItem="Z3j-SY-t8z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="L6H-J3-T8p"/>
+                    <constraint firstAttribute="bottom" secondItem="6h9-P7-mBQ" secondAttribute="bottom" id="LPA-Cx-Dzb"/>
+                    <constraint firstItem="DgX-Q8-1qS" firstAttribute="leading" secondItem="gAg-uS-j9H" secondAttribute="trailing" id="LZb-ss-pSn"/>
+                    <constraint firstItem="Qrz-bb-Ba3" firstAttribute="top" secondItem="BB4-tv-Mev" secondAttribute="bottom" id="MaD-it-unw"/>
+                    <constraint firstAttribute="bottom" secondItem="Qrz-bb-Ba3" secondAttribute="bottom" id="NyU-2J-XrE"/>
+                    <constraint firstItem="DgX-Q8-1qS" firstAttribute="top" secondItem="BB4-tv-Mev" secondAttribute="bottom" id="OVV-BS-CLX"/>
+                    <constraint firstItem="DgX-Q8-1qS" firstAttribute="leading" secondItem="Qrz-bb-Ba3" secondAttribute="trailing" id="PT5-6e-XOF"/>
+                    <constraint firstItem="BB4-tv-Mev" firstAttribute="leading" secondItem="T9h-qm-B4W" secondAttribute="trailing" id="Pur-uw-PqU"/>
+                    <constraint firstItem="DgX-Q8-1qS" firstAttribute="top" secondItem="Z3j-SY-t8z" secondAttribute="bottom" id="V7x-wc-Wp5"/>
+                    <constraint firstItem="T9h-qm-B4W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WkV-ro-wdU"/>
+                    <constraint firstAttribute="bottom" secondItem="DgX-Q8-1qS" secondAttribute="bottom" id="ZHA-r5-3rC"/>
+                    <constraint firstAttribute="trailing" secondItem="BB4-tv-Mev" secondAttribute="trailing" id="fr2-9T-9OF"/>
+                    <constraint firstItem="DgX-Q8-1qS" firstAttribute="width" secondItem="gAg-uS-j9H" secondAttribute="width" multiplier="232:203" id="gYE-pS-6ZG"/>
+                    <constraint firstItem="6h9-P7-mBQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="j7A-d8-TFV"/>
+                    <constraint firstAttribute="bottom" secondItem="gAg-uS-j9H" secondAttribute="bottom" id="mS2-P7-wpq"/>
+                    <constraint firstItem="gAg-uS-j9H" firstAttribute="top" secondItem="Z3j-SY-t8z" secondAttribute="bottom" id="nd1-9c-smE"/>
+                    <constraint firstAttribute="bottom" secondItem="T9h-qm-B4W" secondAttribute="bottom" id="o9J-Fx-LuY"/>
+                    <constraint firstAttribute="trailing" secondItem="DgX-Q8-1qS" secondAttribute="trailing" id="puz-zv-Coh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="food" destination="6h9-P7-mBQ" id="gLR-Y7-Bij"/>
+                <outlet property="life" destination="gAg-uS-j9H" id="g7E-DH-lSK"/>
+                <outlet property="play" destination="Z3j-SY-t8z" id="DM8-Ue-CIc"/>
+                <outlet property="shopping" destination="DgX-Q8-1qS" id="ujW-Wy-g1g"/>
+            </connections>
+            <point key="canvasLocation" x="95.5" y="142.5"/>
+        </tableViewCell>
+    </objects>
+</document>

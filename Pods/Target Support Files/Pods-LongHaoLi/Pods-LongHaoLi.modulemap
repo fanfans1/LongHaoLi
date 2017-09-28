@@ -1,0 +1,6 @@
+framework module Pods_LongHaoLi {
+  umbrella header "Pods-LongHaoLi-umbrella.h"
+
+  export *
+  module * { export * }
+}

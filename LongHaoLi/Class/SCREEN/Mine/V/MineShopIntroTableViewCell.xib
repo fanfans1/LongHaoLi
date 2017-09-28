@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="268" id="KGk-i7-Jjw" customClass="MineShopIntroTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="552" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="552" height="267.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商铺简介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQb-p8-PK7">
+                        <rect key="frame" x="20" y="10" width="512" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="efD-ce-R9u"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sK2-3z-ynT">
+                        <rect key="frame" x="30" y="41" width="492" height="186.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="入驻过程如有问题，请直接拨打客服电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGP-1O-Tt6">
+                        <rect key="frame" x="20" y="237.5" width="512" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Fjn-3W-7ap"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sK2-3z-ynT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="5iu-fr-vxQ"/>
+                    <constraint firstAttribute="trailing" secondItem="AGP-1O-Tt6" secondAttribute="trailing" constant="20" id="BSa-ko-KtZ"/>
+                    <constraint firstAttribute="trailing" secondItem="dQb-p8-PK7" secondAttribute="trailing" constant="20" id="Fux-AF-Xq6"/>
+                    <constraint firstItem="dQb-p8-PK7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IGg-zV-Lvv"/>
+                    <constraint firstAttribute="trailing" secondItem="sK2-3z-ynT" secondAttribute="trailing" constant="30" id="KsW-ai-yrP"/>
+                    <constraint firstItem="AGP-1O-Tt6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="TTP-A6-hNy"/>
+                    <constraint firstItem="dQb-p8-PK7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="aAU-VZ-LOC"/>
+                    <constraint firstAttribute="bottom" secondItem="sK2-3z-ynT" secondAttribute="bottom" constant="40" id="adv-E9-rFK"/>
+                    <constraint firstItem="AGP-1O-Tt6" firstAttribute="top" secondItem="sK2-3z-ynT" secondAttribute="bottom" constant="10" id="axl-eg-eqV"/>
+                    <constraint firstItem="sK2-3z-ynT" firstAttribute="top" secondItem="dQb-p8-PK7" secondAttribute="bottom" constant="10" id="jLs-nJ-Yje"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textFile" destination="sK2-3z-ynT" id="F6r-Y0-yN5"/>
+            </connections>
+            <point key="canvasLocation" x="150" y="166"/>
+        </tableViewCell>
+    </objects>
+</document>

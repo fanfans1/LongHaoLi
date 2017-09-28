@@ -1,0 +1,185 @@
+//
+//  PrefixHeader.pch
+//  Longhaoli
+//
+//  Created by 亿缘 on 2017/7/8.
+//  Copyright © 2017年 亿缘. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "AppDelegate.h"
+
+// Include any/Users/yy/Desktop/Longhaoli/Longhaoli/Class/Common/PrefixHeader.pch system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define COLOUR(R,G,B) [UIColor colorWithRed:R / 255.0 green:G / 255.0 blue:B / 255.0 alpha:1]
+
+#define RECTMACK(A,B,X,Y) CGRectMake(A * SCREEN_WIDTH/414, B * SCREEN_WIDTH/414,X *SCREEN_WIDTH/414,Y *SCREEN_WIDTH/414)
+
+#define FONT(A) [UIFont systemFontOfSize:A*SCREEN_WIDTH/414];
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define BACKGROUNDCOLOR COLOUR(33, 186, 255)
+ 
+#define GLAYCOLOR COLOUR(249, 249, 249)
+
+#define  KEY_USERNAME_PASSWORD @"com.company.app.usernamepassword"
+#define  KEY_USERNAME @"com.company.app.username"
+#define  KEY_PASSWORD @"com.company.app.password"
+
+// 提示框
+#define ALERT(sender)    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:sender preferredStyle:UIAlertControllerStyleAlert];[APPDELEGATE.window.rootViewController presentViewController:alertC animated:YES completion:^{dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{[alertC dismissViewControllerAnimated:YES completion:nil];});}];
+// 判断是否登录
+#define ISLOGIN     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];if ([[user objectForKey:@"login"] isEqualToString:@"1"]){}else{APPDELEGATE.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init] ];return;}
+
+// 取消登录
+#define RESIGIONLOGIN  NSUserDefaults *user = [NSUserDefaults standardUserDefaults];[user setObject:@"0" forKey:@"login"];[user setObject:@"" forKey:@"id"];[user setObject:@"" forKey:@"nickName"];[user setObject:@"" forKey:@"tel"];[user setObject:@"" forKey:@"headPhoto"];[user setObject:@"" forKey:@"city"];APPDELEGATE.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init] ];
+
+ 
+
+#import <Availability.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MAMapKit/MAMapKit.h>
+#import "SDWebImage-umbrella.h"
+#import "CoreTextView.h"
+// MD5加密
+#import "MD5.h"
+// base64编码
+#import "MyBase64.h"
+
+
+// 网络请求
+#import "MJPush.h"
+// 下拉刷新
+#import "MJRefresh.h"
+// 刷新试图
+ 
+#import "MBViewController.h"
+#import "DataBaseHelper.h"
+#import "HSLimitText.h"
+//http://lhltest.tunnel.qydev.com/LongHaoLi/imageUpload?id=47&file=/image/brand/2017/09/06/11/518ff6dd-66cf-4cb0-a8c4-ba22e99325c9.png
+
+// #define HTTP @"http://www.5288yx.com/LongHaoLi/"
+#define HTTP @"http://192.168.0.46:8080/LongHaoLi/"
+//#define IMAGE @"http://192.168.0.42:8080/LongHaoLi"
+#define IMAGE @"http://www.5288yx.com/"
+
+//1 登录
+#define LOGIN HTTP@"user/login"
+//二：用户修改昵称接口
+#define NICKNAME HTTP@"user/nickname"
+//三：添加收货地址
+#define ADDRESS HTTP@"user/address"
+//四：用户修改头像
+#define IMAGEUPLOAD HTTP@"imageUpload"
+//五：查询用户的地址列表
+#define SELECTADDRESSLIST HTTP@"user/selectAddressList"
+
+//六：设置默认地址
+#define DEFAULTADDRESS HTTP@"user/defaultAddress"
+
+//七：店铺申请
+#define APPLYFORSHOP HTTP@"user/applyForShop"
+// 附近商铺
+#define NEARSHOP HTTP@"shop/nearShop"
+// 首页
+#define LIKR HTTP@"roll/like"
+// 四大商铺列表
+#define LIST HTTP@"roll/list"
+// 善行商铺列表
+#define SELECTBENEFACTIONSHOP HTTP@"benefactionshop/selectBenefactionshop"
+// 善行商铺详情
+#define BENEFACTIONSHOPINFO HTTP@"benefactionshop/benefactionshopInfo"
+// 善行商铺商品
+#define SELECTBSGOPACT HTTP@"benefactionshop/selectBShopact"
+
+// 券商铺详情
+#define ROLLINFO HTTP@"shop/rollInfo"
+// 查看所有门店信息
+#define SELECTALLSHOPINFO HTTP@"shop/selectAllShopInfo"
+// 进入抽奖界面
+#define SELECTLOTTERYDRAW HTTP@"user/selectLotterydraw"
+//查看抽奖记录
+#define SELECTLOTTERYDRAWRECORD HTTP@"user/selectLotterydrawRecord"
+// 投诉
+#define COMPLAINT HTTP@"user/complaint"
+// 日历
+#define CALENDAR HTTP@"user/calendar"
+// 日历提醒接口
+#define SELECTCALENDAR HTTP@"user/selectCalendar"
+// 日历更换
+#define UPDATECALENDAR HTTP@"user/updateCalendar"
+
+// 开始抽奖
+#define STARTLOTTERYDRAW HTTP@"lotterydraw/startLotterydraw"
+// 善行捐款
+#define CONTRIBUTION HTTP@"benefaction/contribution"
+// 交易流水
+#define TRANSACTIONRECORD HTTP@"tr/transactionRecord"
+// 赠送好友
+#define SENDFRIEND HTTP@"send/sendFriend"
+// 邮寄地址
+#define POSTGOODS HTTP@"buy/postGoods"
+// 券包
+#define ROLLPACKAGE HTTP@"order/rollPackage"
+// 白名单赠券
+#define SENDROLL HTTP@"sd/sendRoll"
+// 立即购买
+
+#define ROLL HTTP@"buy/roll"
+
+
+// 地图导航
+#import "AMapNaviViewController.h"
+// 券model
+#import "TicketModel.h"
+// 用户Model
+#import "UserMassageModel.h"
+#import "HomeHotCommodityTableViewCell.h"   // 猜你喜欢
+// 登录
+#import "LoginViewController.h"
+// 券详情
+#import "HomeTiceketDetialViewController.h"
+#import "HomeTicketFinishViewController.h"
+#import "WebServerViewController.h"
+// 支付
+#define ORDERNUMBER @"http://regextest.tunnel.qydev.com/pay/toOrderPay.htm?orderNum="
+
+
+
+
+#pragma mark -
+#pragma mark ==============宏通知方法==============
+
+#define addObserver(_selector,_name)\
+([[NSNotificationCenter defaultCenter] addObserver:self selector:_selector name:_name object:nil])
+
+#define removeObserverWithName(_name)\
+([[NSNotificationCenter defaultCenter] removeObserver:self name:_name object:nil])
+
+#define removeObserver() ([[NSNotificationCenter defaultCenter] removeObserver:self])
+
+#define postNotification(_name)\
+([[NSNotificationCenter defaultCenter] postNotificationName:_name object:nil userInfo:nil])
+
+#define postNotificationInfo(_name,_infos)\
+([[NSNotificationCenter defaultCenter] postNotificationName:_name object:nil userInfo:_infos])
+
+#define postNotificationWithObject(_name, _obj)\
+([[NSNotificationCenter defaultCenter] postNotificationName:_name object:_obj userInfo:nil])
+
+#define postNotificationWithInfo(_name, _obj, _infos)\
+([[NSNotificationCenter defaultCenter] postNotificationName:_name object:_obj userInfo:_infos])
+
+#endif /* PrefixHeader_pch */
